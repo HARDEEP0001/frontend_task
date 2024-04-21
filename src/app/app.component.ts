@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from './services/api.service';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'project';
+export class AppComponent implements OnInit{
+  constructor(
+    private apiService: ApiService
+  ) {}
+
+  ngOnInit() {
+    this.apiService.getUser('johnpapa').subscribe(console.log);
+  }
 }

@@ -1,0 +1,17 @@
+.search-container {
+    margin-bottom: 20px;
+  }
+  
+  .loader {
+    margin: 20px 0;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+  }
+  
+  .no-results {
+    margin-top: 20px;
+    color: red;
+  }
+  
